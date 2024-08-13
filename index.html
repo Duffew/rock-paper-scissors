@@ -16,17 +16,17 @@
     </header>
 
     <!-- game area-->
-    <section class="game-area">
+    <section id="game-area">
         <h2>Choose your weapon</h2>
         <!-- game controls -->
-        <div class="controls-area">
+        <div id="controls-area">
             <button class="btn" aria-label="rock">👊</button>
             <button class="btn" aria-label="paper">🤚</button>
             <button class="btn" aria-label="scissors">✌</button>
         </div>
 
         <!-- results table -->
-        <div class="results-table">
+        <div id="results-table">
             <table class="table">
                 <tr>
                     <th>You chose:</th>
@@ -41,9 +41,21 @@
             </table>
         </div>
 
-    </section>
+        <!-- results message -->
+        <div id="results-message">You Win!</div>
+
+        <!-- tally area -->
+         <div id="tally-area">
+           <h3>Tally</h3>
+           <div id="tally-numbers">
+               <p class="tally">You: <span id="player-tally">0</span></p>
+               <p class="tally">Computer: <span id="compuer-tally">0</span></p>
+           </div>
+         </div>
+   </section>
+
     <!-- footer -->
-    <footer class="footer">footer</footer>
+    <footer id="footer">rules: rock beats scissors; scissors beats paper; paper beats rock</footer>
 
     <!-- link to js script -->
     <script src="assets/js/script.js"></script>

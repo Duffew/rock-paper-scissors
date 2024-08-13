@@ -10,25 +10,30 @@
     background-color: aquamarine;
 }
 
-.heading,
-h2 {
+.heading {
     font-size: 2rem;
     color: blueviolet;
     text-transform: uppercase;
     text-align: center;
 }
 
-h2 {
+h2,
+h3 {
     font-size: 1.5rem;
     color: blue;
+    text-transform: uppercase;
+    text-align: center
 }
 
 /* game section */
-.game-area {
+#game-area {
+    border: 1px solid;
     background-color: olivedrab;
 }
 
-.controls-area {
+#controls-area {
+    border: 1px solid;
+    background-color: #283940;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -41,7 +46,9 @@ h2 {
     font-size: 5rem;
 }
 
-.results-table {
+#results-table {
+    border: 1px solid;
+    background-color: #638292;
     display: flex;
     justify-content: space-evenly;
 }
@@ -51,7 +58,28 @@ h2 {
     font-size: 5rem;
 }
 
+#results-message {
+    background-color: #3b0a1f;
+    color: antiquewhite;
+    text-align: center;
+    width: 100%;
+    height: 1rem;
+}
+
+#tally-area {
+    border: 1px solid;
+    background-color: #948652;
+}
+
+#tally-numbers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 /* footer */
-.footer {
+#footer {
     background-color: brown;
+    color: azure;
+    text-align: center;
 }
