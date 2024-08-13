@@ -7,7 +7,6 @@ const displayPlayerChoice = document.getElementById('player-emoji');
 const displayResult = document.getElementById('results-message');
 let buttons = ['rock', 'paper', 'scissors'];
 let choice;
-let randomNumber;
 let computerChoice;
 let result;
 
@@ -22,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             displayPlayerChoice.innerHTML = choice;
             createComputerChoice();
             calculateResult();
+            updateTally();
         })
     }
 })
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * youTube
  */
 function createComputerChoice() {
-    randomNumber = Math.floor(Math.random() * buttons.length);
+    let randomNumber = Math.floor(Math.random() * buttons.length);
 
     if (randomNumber === 0) {
         computerChoice = '👊'
@@ -74,4 +74,20 @@ function calculateResult() {
         result = "You win!"
     }
     displayResult.innerHTML = result;
+}
+
+/**
+ * Create a function to update player
+ * and computer tally
+ * Credit Code Institute - Love Maths tutor
+ */
+function updateTally() {
+    if (result === "You win!") {
+        let oldPlayerTally = parseInt(document.getElementById('player-tally').innerText);
+        document.getElementById('player-tally').innerText = ++oldPlayerTally;
+    }
+    if (result === "You lose!") {
+        let oldComputerTally = parseInt(document.getElementById('computer-tally').innerText);
+        document.getElementById('computer-tally').innerText = ++oldComputerTally;
+    }
 }
