@@ -41,6 +41,16 @@ h2 {
     font-size: 5rem;
 }
 
+.results-table {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#player-emoji,
+#computer-emoji {
+    font-size: 5rem;
+}
+
 /* footer */
 .footer {
     background-color: brown;
