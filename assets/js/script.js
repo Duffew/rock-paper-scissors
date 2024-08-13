@@ -9,6 +9,7 @@ let buttons = ['rock', 'paper', 'scissors'];
 let choice;
 let randomNumber;
 let computerChoice;
+let result;
 
 // add event listeners for buttons
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             choice = this.textContent;
             displayPlayerChoice.innerHTML = choice;
             createComputerChoice();
+            calculateResult();
         })
     }
 })
@@ -42,4 +44,34 @@ function createComputerChoice() {
         computerChoice = '✌'
     }
     displayCompterChoice.innerHTML = computerChoice;
+}
+
+/**
+ * Create a function for calulating game result
+ * Credit Ania Kobow - Code With Ania Kubow - 
+ * youTube
+ */
+function calculateResult() {
+    if (choice === computerChoice) {
+        result = "It's a draw!"
+    }
+    if (choice === '👊' && computerChoice === '🤚') {
+        result = "You lose!"
+    }
+    if (choice === '👊' && computerChoice === '✌') {
+        result = "You win!"
+    }
+    if (choice === '🤚' && computerChoice === '✌') {
+        result = "You lose!"
+    }
+    if (choice === '🤚' && computerChoice === '👊') {
+        result = "You win!"
+    }
+    if (choice === '✌' && computerChoice === '👊') {
+        result = "You lose!"
+    }
+    if (choice === '✌' && computerChoice === '🤚') {
+        result = "You win!"
+    }
+    displayResult.innerHTML = result;
 }
