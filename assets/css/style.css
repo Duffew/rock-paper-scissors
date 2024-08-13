@@ -43,7 +43,7 @@ h3 {
 .btn {
     background: none;
     border: none;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 #results-table {
@@ -53,9 +53,14 @@ h3 {
     justify-content: space-evenly;
 }
 
+.table {
+    border: 1px solid;
+    text-align: center;
+}
+
 #player-emoji,
 #computer-emoji {
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 #results-message {
