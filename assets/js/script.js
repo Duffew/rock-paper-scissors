@@ -58,14 +58,27 @@ function createComputerChoice() {
  * youTube
  */
 function calculateResult() {
+    //draw
     if (choice === computerChoice) {
-        result = "It's a draw!"
+        resultMessage = "It's a draw! Play Again!"
+        result = 0
     }
-    if (choice === '👊' && computerChoice === '🤚') {
-        result = "You lose!"
+    //player chooses rock
+    if (choice === '🪨' && computerChoice === '📜') {
+        resultMessage = "Paper covers rock! You lose!"
+        result = 2
     }
-    if (choice === '👊' && computerChoice === '✌') {
-        result = "You win!"
+    if (choice === '🪨' && computerChoice === '✂️') {
+        resultMessage = "Rock blunts scissors! You win!"
+        result = 1
+    }
+    if (choice === '🪨' && computerChoice === '🖖') {
+        resultMessage = "Spock vaporizes rock! You lose!"
+        result = 2
+    }
+    if (choice === '🪨' && computerChoice === '🦎') {
+        resultMessage = "Rock crushes lizard! You win!"
+        result = 1
     }
     if (choice === '🤚' && computerChoice === '✌') {
         result = "You lose!"
@@ -79,7 +92,7 @@ function calculateResult() {
     if (choice === '✌' && computerChoice === '🤚') {
         result = "You win!"
     }
-    displayResult.innerHTML = result;
+    displayResult.innerHTML = resultMessage;
 }
 
 /**
@@ -88,11 +101,11 @@ function calculateResult() {
  * Credit Code Institute - Love Maths tutor
  */
 function updateTally() {
-    if (result === "You win!") {
+    if (result === 1) {
         let oldPlayerTally = parseInt(document.getElementById('player-tally').innerText);
         document.getElementById('player-tally').innerText = ++oldPlayerTally;
     }
-    if (result === "You lose!") {
+    if (result === 2) {
         let oldComputerTally = parseInt(document.getElementById('computer-tally').innerText);
         document.getElementById('computer-tally').innerText = ++oldComputerTally;
     }
