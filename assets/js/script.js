@@ -8,6 +8,7 @@ const displayResult = document.getElementById('results-message');
 let buttons = ['rock', 'paper', 'scissors'];
 let choice;
 let computerChoice;
+let resultMessage;
 let result;
 
 // add event listeners for buttons
@@ -80,18 +81,41 @@ function calculateResult() {
         resultMessage = "Rock crushes lizard! You win!"
         result = 1
     }
-    if (choice === '🤚' && computerChoice === '✌') {
-        result = "You lose!"
+    //player chooses paper
+    if (choice === '📜' && computerChoice === '🪨') {
+        resultMessage = "Paper covers rock! You win!"
+        result = 1
     }
-    if (choice === '🤚' && computerChoice === '👊') {
-        result = "You win!"
+    if (choice === '📜' && computerChoice === '✂️') {
+        resultMessage = "Scissors cut paper! You lose!"
+        result = 2
     }
-    if (choice === '✌' && computerChoice === '👊') {
-        result = "You lose!"
+    if (choice === '📜' && computerChoice === '🖖') {
+        resultMessage = "Paper disproves Spock! You win!"
+        result = 1
     }
-    if (choice === '✌' && computerChoice === '🤚') {
-        result = "You win!"
+    if (choice === '📜' && computerChoice === '🦎') {
+        resultMessage = "Lizard eats paper! You lose!"
+        result = 2
     }
+     //player chooses scissors
+     if (choice === '✂️' && computerChoice === '🪨') {
+        resultMessage = "Rock blunts scissors! You lose!"
+        result = 2
+    }
+    if (choice === '✂️' && computerChoice === '📜') {
+        resultMessage = "Scissors cut paper! You win!"
+        result = 1
+    }
+    if (choice === '✂️' && computerChoice === '🖖') {
+        resultMessage = "Spock smashes scissors! You lose!"
+        result = 2
+    }
+    if (choice === '✂️' && computerChoice === '🦎') {
+        resultMessage = "Scissors decapitates lizard! You win!"
+        result = 1
+    }
+
     displayResult.innerHTML = resultMessage;
 }
 
