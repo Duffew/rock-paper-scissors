@@ -35,13 +35,19 @@ function createComputerChoice() {
     let randomNumber = Math.floor(Math.random() * buttons.length);
 
     if (randomNumber === 0) {
-        computerChoice = '👊'
+        computerChoice = '🪨'
     }
     if (randomNumber === 1) {
-        computerChoice = '🤚'
+        computerChoice = '📜'
     }
     if (randomNumber === 2) {
-        computerChoice = '✌'
+        computerChoice = '✂️'
+    }
+    if (randomNumber === 3) {
+        computerChoice = '🖖'
+    }
+    if (randomNumber === 4) {
+        computerChoice = '🦎'
     }
     displayCompterChoice.innerHTML = computerChoice;
 }
