@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Peralta&display=swap');
 
 /* override default settings */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Peralta;
+    font-family: Peralta, sans-serif;
 }
 
 /* general page styles */
@@ -67,6 +68,7 @@ h2 {
 .btn {
     background: none;
     border: none;
+    font-family: Noto Color Emoji;
     font-size: 1.6rem;
     padding: 0.3rem 0;
 }
@@ -91,6 +93,7 @@ h2 {
 #player-emoji,
 #computer-emoji {
     font-size: 2.5rem;
+    font-family: Noto Color Emoji;
 }
 
 #player-emoji {
