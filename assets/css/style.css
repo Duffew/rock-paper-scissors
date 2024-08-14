@@ -22,6 +22,7 @@ body {
 /* header */
 .heading {
     color: rgb(202, 154, 96);
+    height: 3.5rem;
     font-size: 1.2rem;
     align-items: center;
     text-align: center;
@@ -33,10 +34,8 @@ body {
 #game-area {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 20px;
+    height: 28rem;
     background-color: #0d2033;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 /* main content headings */
 h2,
@@ -48,9 +47,15 @@ h3 {
     margin: 0.8rem auto;
 }
 
+h2 {
+    height: 3.5rem;
+    margin-bottom: 0;
+}
+
 #controls-area {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 10px;
+    height: 4.5rem;
     background-color: #1c4063;
     display: flex;
     justify-content: space-evenly;
@@ -69,6 +74,7 @@ h3 {
 #results-table {
     background-color: #0d2033;
     color: rgb(202, 154, 96);
+    height: 6rem;
     display: flex;
     justify-content: space-evenly;
     margin: 0 1rem;
@@ -99,14 +105,16 @@ h3 {
 #results-message {
     text-align: center;
     color: rgb(202, 154, 96);
+    height: 6rem;
     font-size: 2rem;
-    margin: 0rem 2rem 1rem;
-    padding: 1rem;
+    margin: 0 2rem 1rem;
+    padding: 0.5rem;
 }
 
 #tally-area {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 10px;
+    height: 4rem;
     background-color: #1c4063;
     align-items: center;
     margin: 0 1rem 1rem;
