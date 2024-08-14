@@ -132,6 +132,23 @@ function calculateResult() {
         resultMessage = "Lizard poisons Spock! You lose!"
         result = 2
     }
+    //player chooses lizard
+    if (choice === '🦎' && computerChoice === '🪨') {
+        resultMessage = "Rock crushes lizard! You lose!"
+        result = 2
+    }
+    if (choice === '🦎' && computerChoice === '📜') {
+        resultMessage = "Lizard eats paper! You win!"
+        result = 1
+    }
+    if (choice === '🦎' && computerChoice === '✂️') {
+        resultMessage = "Scissors decapitates lizard! You lose!"
+        result = 2
+    }
+    if (choice === '🦎' && computerChoice === '🖖') {
+        resultMessage = "Lizard poisons Spock! You win!"
+        result = 1
+    }
 
     displayResult.innerHTML = resultMessage;
 }
