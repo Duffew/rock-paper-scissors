@@ -148,12 +148,17 @@ h2 {
 }
 
 /* footer */
+/* footer */
 #footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #1c4063;
-    color: azure;
-    text-align: center;
     margin-top: 1rem;
     padding-bottom: 0.5rem;
+}
+
+#footer button {
+    background: none;
+    border: none;
+    color: #FFC83D;
 }
