@@ -91,8 +91,7 @@ function updateTally() {
     if (result === 1) {
         let oldPlayerTally = parseInt(document.getElementById('player-tally').innerText);
         document.getElementById('player-tally').innerText = ++oldPlayerTally;
-    }
-    if (result === 2) {
+    } else if (result === 2) {
         let oldComputerTally = parseInt(document.getElementById('computer-tally').innerText);
         document.getElementById('computer-tally').innerText = ++oldComputerTally;
     }
