@@ -31,20 +31,27 @@ const outcomes = [
     { player: '🦎', computer: '🖖', message: "Lizard poisons Spock! You win!", result: 1 }
 ];
 // add event listeners for buttons
+// Add event listeners for buttons
 document.addEventListener("DOMContentLoaded", function () {
     buttons = document.getElementsByTagName('button');
-
     for (let button of buttons) {
         button.addEventListener('click', function () {
-            if (this.getAttribute('class') === 'btn');
-            choice = this.textContent;
-            displayPlayerChoice.innerHTML = choice;
-            createComputerChoice();
-            calculateResult();
-            updateTally();
-        })
+            if (this.getAttribute('class') === 'btn') {
+                choice = this.textContent;
+                displayPlayerChoice.innerHTML = choice;
+                createComputerChoice();
+                calculateResult();
+                updateTally();
+            }
+        });
     }
-})
+});
+/**
+ * resets tally by refreshing page
+ */
+function refreshPage() {
+    window.location.reload();
+}
 
 /**
  * Generates a random choice for the computer and updates the DOM.

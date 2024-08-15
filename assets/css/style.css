@@ -149,6 +149,8 @@ h2 {
 
 /* footer */
 #footer {
+    display: flex;
+    justify-content: space-between;
     background-color: #1c4063;
     color: azure;
     text-align: center;
