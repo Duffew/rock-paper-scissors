@@ -33,15 +33,18 @@ body {
 
 /* game section */
 #game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 2px solid rgb(223, 209, 193);
     border-radius: 20px;
-    height: 28rem;
+    height: 80vh;
     background-color: #0d2033;
 }
 /* main content headings */
 h2,
 h3 {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: rgb(202, 154, 96);
     text-transform: uppercase;
     text-align: center;
@@ -85,7 +88,7 @@ h2 {
 }
 
 .table {
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: center;
     padding: 0.25rem;
 }
@@ -115,7 +118,7 @@ h2 {
     text-align: center;
     color: rgb(202, 154, 96);
     height: 4rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin: 0.75rem auto;
     padding: 1rem;
 }
@@ -131,14 +134,14 @@ h2 {
 }
 
 #tally-area h3 {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     line-height: 0.1rem;
 }
 #tally-numbers {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: rgb(202, 154, 96);
 }
 
@@ -151,15 +154,14 @@ h2 {
 #footer {
     display: flex;
     justify-content: space-evenly;
-    background-color: #1c4063;
-    margin-top: 1rem;
-    padding-bottom: 0.5rem;
+    height: 7.5vh;
 }
 
 #footer button {
     background: none;
     border: none;
     color: #FFC83D;
+    font-size: 0.9rem;
 }
 
 /* The Modal - acknowlegde w3schools.com library */
@@ -193,4 +195,11 @@ h2 {
   .close {
     float: right;
     font-size: 1.5rem;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }
