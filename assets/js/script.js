@@ -1,16 +1,35 @@
-/* declare variables for DOM elements
-Credit Ania Kobow - Code With Ania Kubow - 
-youTube */
-
-const displayCompterChoice = document.getElementById('computer-emoji');
+/**
+ * declare variables for DOM elements
+ */
+const displayComputerChoice = document.getElementById('computer-emoji');
 const displayPlayerChoice = document.getElementById('player-emoji');
 const displayResult = document.getElementById('results-message');
-let buttons = ['rock', 'paper', 'scissors', 'spock', 'lizard'];
 let choice;
 let computerChoice;
-let resultMessage;
 let result;
-
+// Array of possible game outcomes
+const outcomes = [
+    { player: '🪨', computer: '📜', message: "Paper covers rock! You lose!", result: 2 },
+    { player: '🪨', computer: '✂️', message: "Rock blunts scissors! You win!", result: 1 },
+    { player: '🪨', computer: '🖖', message: "Spock vaporizes rock! You lose!", result: 2 },
+    { player: '🪨', computer: '🦎', message: "Rock crushes lizard! You win!", result: 1 },
+    { player: '📜', computer: '🪨', message: "Paper covers rock! You win!", result: 1 },
+    { player: '📜', computer: '✂️', message: "Scissors cut paper! You lose!", result: 2 },
+    { player: '📜', computer: '🖖', message: "Paper disproves Spock! You win!", result: 1 },
+    { player: '📜', computer: '🦎', message: "Lizard eats paper! You lose!", result: 2 },
+    { player: '✂️', computer: '🪨', message: "Rock blunts scissors! You lose!", result: 2 },
+    { player: '✂️', computer: '📜', message: "Scissors cut paper! You win!", result: 1 },
+    { player: '✂️', computer: '🖖', message: "Spock smashes scissors! You lose!", result: 2 },
+    { player: '✂️', computer: '🦎', message: "Scissors decapitates lizard! You win!", result: 1 },
+    { player: '🖖', computer: '🪨', message: "Spock vaporizes rock! You win!", result: 1 },
+    { player: '🖖', computer: '📜', message: "Paper disproves Spock! You lose!", result: 2 },
+    { player: '🖖', computer: '✂️', message: "Spock smashes scissors! You win!", result: 1 },
+    { player: '🖖', computer: '🦎', message: "Lizard poisons Spock! You lose!", result: 2 },
+    { player: '🦎', computer: '🪨', message: "Rock crushes lizard! You lose!", result: 2 },
+    { player: '🦎', computer: '📜', message: "Lizard eats paper! You win!", result: 1 },
+    { player: '🦎', computer: '✂️', message: "Scissors decapitates lizard! You lose!", result: 2 },
+    { player: '🦎', computer: '🖖', message: "Lizard poisons Spock! You win!", result: 1 }
+];
 // add event listeners for buttons
 document.addEventListener("DOMContentLoaded", function () {
     buttons = document.getElementsByTagName('button');
@@ -28,128 +47,38 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 /**
- * Create a function for a random computer chioce
- * Credit Ania Kobow - Code With Ania Kubow - 
- * youTube
+ * Generates a random choice for the computer and updates the DOM.
  */
 function createComputerChoice() {
-    let randomNumber = Math.floor(Math.random() * buttons.length);
-
-    if (randomNumber === 0) {
-        computerChoice = '🪨'
-    }
-    if (randomNumber === 1) {
-        computerChoice = '📜'
-    }
-    if (randomNumber === 2) {
-        computerChoice = '✂️'
-    }
-    if (randomNumber === 3) {
-        computerChoice = '🖖'
-    }
-    if (randomNumber === 4) {
-        computerChoice = '🦎'
-    }
-    displayCompterChoice.innerHTML = computerChoice;
+    const choices = ['🪨', '📜', '✂️', '🖖', '🦎'];
+    let randomIndex = Math.floor(Math.random() * choices.length);
+    computerChoice = choices[randomIndex];
+    displayComputerChoice.innerHTML = computerChoice;
 }
 
 /**
- * Create a function for calulating game result
- * Credit Ania Kobow - Code With Ania Kubow - 
- * youTube
+ * Calculates the game result based on player and computer choices.
+ * Updates the resultMessage and result variables, and displays the result.
  */
 function calculateResult() {
-    //draw
+    // check for draw
     if (choice === computerChoice) {
-        resultMessage = "It's a draw! Play Again!"
-        result = 0
+        resultMessage = "It's a draw! Play Again!";
+        result = 0;
+    } else {
+        // loop through outcomes array to find matching outcome
+        let outcome;
+        for (let i = 0; i < outcomes.length; i++) {
+            if (outcomes[i].player === choice && outcomes[i].computer === computerChoice) {
+                outcome = outcomes[i];
+                break; // stop looping once the match has been found
+            }
+        }
+        if (outcome) {
+            resultMessage = outcome.message;
+            result = outcome.result;
+        }
     }
-    //player chooses rock
-    if (choice === '🪨' && computerChoice === '📜') {
-        resultMessage = "Paper covers rock! You lose!"
-        result = 2
-    }
-    if (choice === '🪨' && computerChoice === '✂️') {
-        resultMessage = "Rock blunts scissors! You win!"
-        result = 1
-    }
-    if (choice === '🪨' && computerChoice === '🖖') {
-        resultMessage = "Spock vaporizes rock! You lose!"
-        result = 2
-    }
-    if (choice === '🪨' && computerChoice === '🦎') {
-        resultMessage = "Rock crushes lizard! You win!"
-        result = 1
-    }
-    //player chooses paper
-    if (choice === '📜' && computerChoice === '🪨') {
-        resultMessage = "Paper covers rock! You win!"
-        result = 1
-    }
-    if (choice === '📜' && computerChoice === '✂️') {
-        resultMessage = "Scissors cut paper! You lose!"
-        result = 2
-    }
-    if (choice === '📜' && computerChoice === '🖖') {
-        resultMessage = "Paper disproves Spock! You win!"
-        result = 1
-    }
-    if (choice === '📜' && computerChoice === '🦎') {
-        resultMessage = "Lizard eats paper! You lose!"
-        result = 2
-    }
-     //player chooses scissors
-     if (choice === '✂️' && computerChoice === '🪨') {
-        resultMessage = "Rock blunts scissors! You lose!"
-        result = 2
-    }
-    if (choice === '✂️' && computerChoice === '📜') {
-        resultMessage = "Scissors cut paper! You win!"
-        result = 1
-    }
-    if (choice === '✂️' && computerChoice === '🖖') {
-        resultMessage = "Spock smashes scissors! You lose!"
-        result = 2
-    }
-    if (choice === '✂️' && computerChoice === '🦎') {
-        resultMessage = "Scissors decapitates lizard! You win!"
-        result = 1
-    }
-    //player chooses spock
-    if (choice === '🖖' && computerChoice === '🪨') {
-        resultMessage = "Spock vaporizes rock! You win!"
-        result = 1
-    }
-    if (choice === '🖖' && computerChoice === '📜') {
-        resultMessage = "Paper disproves Spock! You lose!"
-        result = 2
-    }
-    if (choice === '🖖' && computerChoice === '✂️') {
-        resultMessage = "Spock smashes scissors! You win!"
-        result = 1
-    }
-    if (choice === '🖖' && computerChoice === '🦎') {
-        resultMessage = "Lizard poisons Spock! You lose!"
-        result = 2
-    }
-    //player chooses lizard
-    if (choice === '🦎' && computerChoice === '🪨') {
-        resultMessage = "Rock crushes lizard! You lose!"
-        result = 2
-    }
-    if (choice === '🦎' && computerChoice === '📜') {
-        resultMessage = "Lizard eats paper! You win!"
-        result = 1
-    }
-    if (choice === '🦎' && computerChoice === '✂️') {
-        resultMessage = "Scissors decapitates lizard! You lose!"
-        result = 2
-    }
-    if (choice === '🦎' && computerChoice === '🖖') {
-        resultMessage = "Lizard poisons Spock! You win!"
-        result = 1
-    }
-
     displayResult.innerHTML = resultMessage;
 }
 
