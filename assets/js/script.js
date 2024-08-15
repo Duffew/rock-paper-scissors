@@ -1,5 +1,6 @@
-/**
- * declare variables for DOM elements
+/* 
+ * Declare variables for DOM elements
+ * 
  */
 const displayComputerChoice = document.getElementById('computer-emoji');
 const displayPlayerChoice = document.getElementById('player-emoji');
@@ -7,7 +8,7 @@ const displayResult = document.getElementById('results-message');
 let choice;
 let computerChoice;
 let result;
-// Array of possible game outcomes
+// Array of game outcomes
 const outcomes = [
     { player: '🪨', computer: '📜', message: "Paper covers rock! You lose!", result: 2 },
     { player: '🪨', computer: '✂️', message: "Rock blunts scissors! You win!", result: 1 },
@@ -30,7 +31,6 @@ const outcomes = [
     { player: '🦎', computer: '✂️', message: "Scissors decapitates lizard! You lose!", result: 2 },
     { player: '🦎', computer: '🖖', message: "Lizard poisons Spock! You win!", result: 1 }
 ];
-// add event listeners for buttons
 // Add event listeners for buttons
 document.addEventListener("DOMContentLoaded", function () {
     buttons = document.getElementsByTagName('button');
@@ -47,13 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 /**
- * resets tally by refreshing page
- */
-function refreshPage() {
-    window.location.reload();
-}
-
-/**
  * Generates a random choice for the computer and updates the DOM.
  */
 function createComputerChoice() {
@@ -62,23 +55,22 @@ function createComputerChoice() {
     computerChoice = choices[randomIndex];
     displayComputerChoice.innerHTML = computerChoice;
 }
-
 /**
  * Calculates the game result based on player and computer choices.
  * Updates the resultMessage and result variables, and displays the result.
  */
 function calculateResult() {
-    // check for draw
+    // Check for draw
     if (choice === computerChoice) {
         resultMessage = "It's a draw! Play Again!";
         result = 0;
     } else {
-        // loop through outcomes array to find matching outcome
+        // Loop through the outcomes array to find the matching outcome
         let outcome;
         for (let i = 0; i < outcomes.length; i++) {
             if (outcomes[i].player === choice && outcomes[i].computer === computerChoice) {
                 outcome = outcomes[i];
-                break; // stop looping once the match has been found
+                break; // Stop looping once the match is found
             }
         }
         if (outcome) {
@@ -88,12 +80,7 @@ function calculateResult() {
     }
     displayResult.innerHTML = resultMessage;
 }
-
-/**
- * Create a function to update player
- * and computer tally
- * Credit Code Institute - Love Maths tutor
- */
+// update tally for player and computer
 function updateTally() {
     if (result === 1) {
         let oldPlayerTally = parseInt(document.getElementById('player-tally').innerText);
@@ -102,4 +89,13 @@ function updateTally() {
         let oldComputerTally = parseInt(document.getElementById('computer-tally').innerText);
         document.getElementById('computer-tally').innerText = ++oldComputerTally;
     }
+}
+
+// Function to reset the tally
+function resetTally() {
+    document.getElementById('player-tally').innerText = 0;
+    document.getElementById('computer-tally').innerText = 0;
+    displayResult.innerText ="";
+    displayComputerChoice.innerText = "";
+    displayPlayerChoice.innerText = "";
 }

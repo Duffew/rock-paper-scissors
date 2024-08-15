@@ -11,7 +11,7 @@
 
 <body>
     <!-- header -->
-    <header class="header">
+    <header class="header" id="index">
         <h1 class="heading">Rock, Paper, Scissors, Spock, Lizard</h1>
     </header>
 
@@ -54,11 +54,35 @@
            </div>
          </div>
    </section>
-    <!-- footer -->
-    <footer id="footer">
-        <button id="rules" aria-label="rules">rules</button>
-        <button id="reset-tally" aria-label="rules" onClick="refreshPage()">reset tally</button>
-    </footer>
+        <!-- footer -->
+        <footer id="footer">
+            <button id="rules" aria-label="rules">rules</button>
+    
+            <!-- modal - acknowlegde w3schools.com library-->
+            <div id="rules-modal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">❎</span>
+                    <br>
+                    <p><span style="text-decoration: underline;">The Weapons:</span></p>
+                    <p>🪨 = rock </p>
+                    <p>📜 = paper</p>
+                    <p>✂️ = scissors</p>
+                    <p>🖖 = Spock</p>
+                    <p>🦎 = lizard</p>
+                    <br>
+                    <hr>
+                    <br>
+                    <p><span style="text-decoration: underline;">The Rules:</span></p>
+                    <p>🪨 beats 🦎 & ✂️</p>
+                    <p>📜 beats 🪨 & 🖖</p>
+                    <p>✂️ beats 📜 & 🦎</p>
+                    <p>🖖 beats ✂️ & 🪨</p>
+                    <p>🦎 beats 🖖 & 📜</p>
+                </div>
+            </div>
+            <button id="reset-tally" aria-label="rules" onClick="resetTally()">reset tally</button>
+        </footer>
 
     <!-- link to js script -->
     <script src="assets/js/script.js"></script>
