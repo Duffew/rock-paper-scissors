@@ -39,6 +39,7 @@ body {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 20px;
     height: 80vh;
+    min-height: 470px;
     background-color: #0d2033;
     overflow: hidden; /* Prevent overflow issues */
 }
@@ -101,7 +102,7 @@ h2 {
 
 #player-emoji,
 #computer-emoji {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: Noto Color Emoji;
 }
 
@@ -120,7 +121,7 @@ h2 {
     text-align: center;
     color: rgb(202, 154, 96);
     height: 4rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0rem auto;
     padding: 1rem;
     flex-shrink: 0; /* Prevent shrinking */
