@@ -31,28 +31,45 @@ const outcomes = [
     { player: '🦎', computer: '✂️', message: "Scissors decapitates lizard! You lose!", result: 2 },
     { player: '🦎', computer: '🖖', message: "Lizard poisons Spock! You win!", result: 1 }
 ];
-// Add event listeners for buttons
+/* Add event listeners for buttons
+and define main game function */
 document.addEventListener("DOMContentLoaded", function () {
     buttons = document.getElementsByTagName('button');
     for (let button of buttons) {
         button.addEventListener('click', function () {
             if (this.getAttribute('class') === 'btn') {
                 choice = this.textContent;
-                displayPlayerChoice.innerHTML = choice;
-                createComputerChoice();
-                calculateResult();
-                updateTally();
+                clearDisplay();
+                //delay displaying result to provide user feedback
+                setTimeout(function () {
+                    displayPlayerChoice.innerHTML = choice;
+                    createComputerChoice();
+                    calculateResult();
+                    updateTally();
+                }, 500)
+
             }
         });
     }
 });
 /**
+ * Clears the display of game results and result messgae
+ */
+function clearDisplay() {
+    displayPlayerChoice.innerHTML = "";
+    displayComputerChoice.innerHTML = "";
+    displayResult.innerHTML = "";
+}
+/**
  * Generates a random choice for the computer and updates the DOM.
  */
 function createComputerChoice() {
+    //declare possible computer choices
     const choices = ['🪨', '📜', '✂️', '🖖', '🦎'];
+    //randomise the computer's choice
     let randomIndex = Math.floor(Math.random() * choices.length);
     computerChoice = choices[randomIndex];
+    //display the computer's choice
     displayComputerChoice.innerHTML = computerChoice;
 }
 /**
@@ -74,18 +91,23 @@ function calculateResult() {
             }
         }
         if (outcome) {
+            //get the result message from the outcome array
             resultMessage = outcome.message;
+            //get the result from the outcome array
             result = outcome.result;
         }
     }
+    //display the result message
     displayResult.innerHTML = resultMessage;
 }
 // update tally for player and computer
 function updateTally() {
     if (result === 1) {
+        //get and increment old player tally by 1
         let oldPlayerTally = parseInt(document.getElementById('player-tally').innerText);
         document.getElementById('player-tally').innerText = ++oldPlayerTally;
     } else if (result === 2) {
+        //get and increment old computer tally by 1
         let oldComputerTally = parseInt(document.getElementById('computer-tally').innerText);
         document.getElementById('computer-tally').innerText = ++oldComputerTally;
     }
@@ -93,11 +115,10 @@ function updateTally() {
 
 // Function to reset the tally
 function resetTally() {
+    //reset player and computer tallys to 0
     document.getElementById('player-tally').innerText = 0;
     document.getElementById('computer-tally').innerText = 0;
-    displayResult.innerText ="";
-    displayComputerChoice.innerText = "";
-    displayPlayerChoice.innerText = "";
+    clearDisplay()
 }
 // Logic for the modal - acknowlegde w3schools.com library
 
@@ -111,18 +132,18 @@ const rulesBtn = document.getElementById("rules");
 const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-rulesBtn.onclick = function() {
-  modal.style.display = "block";
+rulesBtn.onclick = function () {
+    modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span.onclick = function () {
+    modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
