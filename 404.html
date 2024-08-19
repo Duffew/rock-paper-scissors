@@ -9,29 +9,29 @@
     <!-- title -->
     <title>Rock, Paper, Scissors, Spock, Lizard</title>
     <!-- favicon -->
-     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
-     <link rel="android-chrome" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
-     <link rel="android-chrome" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
-     <link rel="icon" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-     <link rel="icon" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="android-chrome" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
+    <link rel="android-chrome" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
+    <link rel="icon" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
 </head>
 
-<body>
+<body id="error-page">
     <!-- header -->
-    <header>
+    <header class>
+        <h1>oops! 404 error - that page doesn't exist!</h1>
     </header>
-
+    <!-- main -->
     <main>
-        <section class="game-area">
-            <h1>oops! 404 error - page not found!</h1>
-            <p>lets get back to the game</p>
-            <button></button>
-
+        <section id="error-section">
+            <p>let's get back to the game!</p>
+            <a href="index.html" target="_blank" aria-label="link to game page (page opens in a new tab)"><button
+                    id="error-button" aria-label="get back">Get Back</button></a>
         </section>
     </main>
 
-    
-    </footer>
+    <!-- footer -->
+    <footer></footer>
 
     <!-- link to js script -->
     <script src="assets/js/script.js"></script>

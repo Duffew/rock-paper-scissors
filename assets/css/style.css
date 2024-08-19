@@ -32,7 +32,7 @@ body {
 }
 
 /* game section */
-.game-area {
+#game-area {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -214,6 +214,31 @@ h2 {
 .close {
     float: right;
     font-size: 1.5rem;
+}
+
+/* 404 page */
+#error-page {
+    color: rgb(202, 154, 96);
+    height: auto;
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#error-section p {
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+#error-button {
+    height: 3rem;
+    width: 7rem;
+    background-color: #FFC83D;
+    font-size: 1.2rem;
 }
 
 /* Media query: medium phones (348px and up) */
