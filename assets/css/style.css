@@ -14,7 +14,7 @@ body {
     width: 80%;
     min-height: 100vh;
     margin: 0 auto;
-    background-color: #1c4063;
+    background-color: #143453;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -65,7 +65,7 @@ h2 {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 10px;
     height: 9.5rem;
-    background-color: #1c4063;
+    background-color: #143453;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -138,7 +138,7 @@ h2 {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 10px;
     height: 3.3rem;
-    background-color: #1c4063;
+    background-color: #143453;
     align-items: center;
     margin: 0.5rem 1rem 0.5rem;
     flex-shrink: 0;
