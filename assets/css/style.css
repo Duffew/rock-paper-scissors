@@ -333,3 +333,37 @@ h2 {
         font-size: 1.5rem;
     }
 }
+
+/* media query: desktop screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+    #game-area {
+        height: 600px;
+    }
+
+    h2 {
+        margin: 3% auto;
+    }
+
+    .btn:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: 100ms;
+    }
+
+    #game-area {
+        width: 950px;
+        margin: 0 auto;
+    }
+
+    #results-table {
+        margin-top: 0.25rem;
+    }
+
+    #results-message {
+        margin-bottom: 0;
+    }
+
+    #tally-area {
+        margin-top: 2rem;
+    }
+}
