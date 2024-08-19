@@ -224,10 +224,54 @@ h2 {
     }
 }
 
-/* Media query: large phones (425px and up) */
-@media screen and (min-width: 425px) {
+/* Media query: large phones (430px and up) */
+@media screen and (min-width: 430px) {
+    #game-area {
+        min-height: 600px;
+    }
     #controls-area {
         min-width: 90%;
         margin: 0 auto;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        height: auto; /*make div height expand with its content*/
+        margin: 5% auto;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin: 5% auto;
+    }
+
+    .table {
+        font-size: 1.1rem;
+    }
+    .table th {
+        height: 4rem;
+    }
+
+    #player-emoji,
+    #computer-emoji {
+        font-size: 4rem;
+    }
+
+    #results-message {
+        font-size: 1.5rem;
+        margin: 1rem auto;
+        padding: 4rem 1rem 1rem;
+    }
+
+    #tally-area {
+        min-height: 4rem;
+    }
+
+    #tally-numbers {
+        font-size: 1.2rem;
+    }
+
+    #footer button {
+        font-size: 1.25rem;
     }
 }
