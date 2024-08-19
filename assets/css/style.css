@@ -81,6 +81,7 @@ h2 {
     font-family: Noto Color Emoji;
     font-size: 3rem;
     padding: 0.3rem 0;
+    color: aliceblue; /* doesn't change emoji colour but resolves WAVE contrast error */
 }
 
 /*result area */
