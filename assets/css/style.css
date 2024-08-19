@@ -32,7 +32,7 @@ body {
 }
 
 /* game section */
-#game-area {
+.game-area {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
