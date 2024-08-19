@@ -285,12 +285,14 @@ h2 {
 /* media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     #game-area {
-        min-height: 600px;
+        height: 650px;
         font-family: Noto Color Emoji;
     }
+
     .heading {
         font-size: 2.5rem;
     }
+
     h2 {
         font-size: 2rem;
     }
@@ -312,5 +314,22 @@ h2 {
 
     #results-message {
         font-size: 1.8rem;
+        padding: 5.5rem 1rem 1rem;
+    }
+
+    #tally-area h3 {
+        font-size: 1.25rem;
+    }
+
+    #tally-area {
+        min-height: 5rem;
+    }
+
+    #tally-numbers {
+        font-size: 1.5rem;
+    }
+
+    #footer button {
+        font-size: 1.5rem;
     }
 }
