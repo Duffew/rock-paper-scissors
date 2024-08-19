@@ -14,7 +14,7 @@ body {
     width: 80%;
     min-height: 100vh;
     margin: 0 auto;
-    background-color: #143453;
+    background-color: #1c4063;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -65,7 +65,7 @@ h2 {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 10px;
     height: 9.5rem;
-    background-color: #143453;
+    background-color: #1c4063;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -81,7 +81,6 @@ h2 {
     font-family: Noto Color Emoji;
     font-size: 3rem;
     padding: 0.3rem 0;
-    color: aliceblue; /* doesn't change emoji colour but resolves WAVE contrast error */
 }
 
 /*result area */
@@ -138,7 +137,7 @@ h2 {
     border: 2px solid rgb(223, 209, 193);
     border-radius: 10px;
     height: 3.3rem;
-    background-color: #143453;
+    background-color: #1c4063;
     align-items: center;
     margin: 0.5rem 1rem 0.5rem;
     flex-shrink: 0;
@@ -230,16 +229,34 @@ h2 {
     justify-content: space-evenly;
 }
 
-#error-section p {
+#error-section h2 {
     margin: 2rem;
     font-size: 1.5rem;
 }
 
-#error-button {
-    height: 3rem;
-    width: 7rem;
+#return-link {
+    border: 2px solid #2a2007;
+    border-radius: 5px;
     background-color: #FFC83D;
+    height: auto;
+    width: 7rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* make whole div clickable */
+#return-link a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #2a2007;
     font-size: 1.2rem;
+}
+
+#return-link:hover {
+    transform: scale(1.2);
+    transition: 100ms;
 }
 
 /* Media query: medium phones (348px and up) */
