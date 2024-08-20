@@ -109,9 +109,7 @@ function updateTally() {
 function resetTally() {
     document.getElementById('player-tally').innerText = 0;
     document.getElementById('computer-tally').innerText = 0;
-    displayResult.innerText ="";
-    displayComputerChoice.innerText = "";
-    displayPlayerChoice.innerText = "";
+    clearDisplay();
 }
 
 // Get the modal
