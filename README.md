@@ -16,6 +16,8 @@ This website is fully responsive for a range of screen sizes.
 
 ## Features
 
+### Existing Features
+
 + Header - The page opens with a large, clear header, which uses a h1 heading to provide users with the name of the game.
 
     <img src="screenshots/header.png" alt="screenshot of the game heading">
@@ -49,13 +51,13 @@ This website is fully responsive for a range of screen sizes.
     - Rules Modal - Selecting the 'rules' text will bring up a modal showing a key to the weapons and a graphical representation of which weapons beat which. The modal can be closed by either selecting the green cross or clicking outside the modal area.
     - Reset Tally - Selecting this text will reset both the player and computer tallies and clear the results area without the user having to refresh the page.
 
-    <img src="screenshots/rules_modal.png" alt="screenshot of the rules modal">
-
-    *Rules modal*
-
     <img src="screenshots/footer.png" alt="screenshot of the footer area">
 
     *Footer area*
+
+    <img src="screenshots/rules_modal.png" alt="screenshot of the rules modal">
+
+    *Rules modal*
 
 + 404 Page - This website also makes use of a 404 page. This page informs the user that the page they are looking for does not exist and features a link back to the game.
 
@@ -63,18 +65,82 @@ This website is fully responsive for a range of screen sizes.
 
     *404 page*
 
+### Possible Future Features
+
++ Ability for a player to add a name to the display table heading.
++ Ability to set a 'best of' feature so that the winner is delcalerd after a player-defined number of games.
+
 ## dev steps
 
-## testing
-### html
-### css
-### js
+## Testing
+
+### Validator Testing
+
++ HTML - no errors were found when entering the index.html or 404.html code into the W3C validator
+
+<img src="screenshots/index_html.png" alt="screenshot of HTML validation results">
+
+*W3C validator results - HTML*
+
++ CSS - no errors were found when entering the style.css code into the W3C Jigsaw validator
+
+<img src="screenshots/css.png" alt="screenehot of CSS Jigsaw validation results">
+
+*W3C JIgsaw validator results - CSS*
+
++ JavaScript - no errors were found when entering the script.js code into the jshint validator - the unused variable message relates to an onclick attribute within index.html and is not called directly within script.js.
+
+<img src="screenshots/javascript.png" alt="screenshot of js hint validation results">
+
+*jshint validation results - JavaScript*
+
+### Lighthouse Testing
+
++ The website returned the following Lighthouse results when tested in incognito mode:
+
+<img src="screenshots/lighthouse.png" alt="lighthouse test results">
+
+*Lighthouse test results*
+
+### WAVE Testing
+
++ The website returned the following results when when tested using the Web Accessibility Evalualtion Tool:
+
+<img src="screenshots/WAVE.png" alt="WAVE test results">
+
+*WAVE test results*
+
+### User Interactivity Testing
+
++ All of the game selection buttons work and return the correct results message and tally increment when required.
++ Tallies do not increment in the event of a tie.
++ The modal opens when 'rules' is selected and closes when either the green cross is selected or the user clicks away from the modal.
++ The tallies reset when 'reset tally' is selected.
++ A 404 page displays un the event of a navigation error
++ The game page appears when the 'Get Back' link is selected on the 404 page.
+
+### Browser Testing
+
++ The website was tested and proved to work on the following browsers:
+    - Chrome
+    - Edge
+    - Safari
+    - Firefox
+
+
+
 ### Bugs
 
-+ During development, it became clear that sometimes both the player and computer would make the same selection multiple times in a row. In the instance of a draw, nothing would change on the page and it appeared that the game was frozen. To counter this, I created a clearDisplay() function and a setTimeout() function. These functions ensured that when the user made a selection: 
-    - the display would clear
-    - the game results would be returned after a short delay
-    - the user is sure that that their selection has been actioned
+#### Bugs Fixed During Development
+
+The following provides examples of bugs that were identified and fixed within developmeny.
+
++ Missing user feedback
+    - The issue: During development, it became clear that sometimes both the player and computer would make the same selection multiple times in a row. In the instance of a draw, nothing would change on the page and it appeared that the game was frozen.
+    - The fix: To counter this, I created a clearDisplay() function and a setTimeout() function. Result: fixed. These functions ensured that when the user made a selection: 
+        - the display would clear
+        - the game results would be returned after a short delay
+        - the user is sure that that their selection has been actioned
 
     <img src="screenshots/clearDisplay.png" alt="screenshot of the clear display function">
 
@@ -83,6 +149,29 @@ This website is fully responsive for a range of screen sizes.
     <img src="screenshots/setTimeout.png" alt="screenshot of the set timeout function">
 
     *setTimeout() function*
+
++ Computer tally not updating
+    - Early in the development cycle, a bug was identified whereby the computer tally was not updating in the event of a player loss.
+
+    <img src="screenshots/bug_1_issue.png" alt="screenshot of computer tally bug">
+
+    *Computer tally bug - the issue*
+
+    - The probelm - spelling. When writting the span used to display the computer's tally, I had misspeled the id: "compuer-tally". This meant that the JavaScript function was referencing a span that did not exist.
+
+    <img src="screenshots/bug_1_problem.png" alt="screenshot of the computer tally bug problem">
+
+    *Computer tally bug - the problem*
+
+    - The fix: adjust the spelling so that index.html and script.js match. Result: fixed.
+
+    <img src="screenshots/bug_1_fixed.png" alt="screenshot of the computer tally bug fixed">
+
+    *Computer tally bug - fixed*
+
+#### Outstanding Bugs
+
++ There are no outstanding bugs.
 
 ### lessons
 
