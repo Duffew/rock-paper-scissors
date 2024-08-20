@@ -5,7 +5,7 @@
 The Rock, Paper, Scissors, Spock, Lizard Game website is a one-page, interactive website upon which, users can play a game of chance. Users of this site are able to:
 
 + Play the game by selecting emojis
-+ View their  result against a randomly generated computer choice
++ View their result against a randomly generated computer choice
 + View their accumulated score tally
 + Reset the game tally
 + View the rules
@@ -68,7 +68,7 @@ This website is fully responsive for a range of screen sizes.
 ### Possible Future Features
 
 + Ability for a player to add a name to the display table heading.
-+ Ability to set a 'best of' feature so that the winner is delcalerd after a player-defined number of games.
++ Ability to set a 'best of' feature so that the winner is declared after a player-defined number of games.
 
 ## dev steps
 
@@ -84,13 +84,13 @@ This website is fully responsive for a range of screen sizes.
 
 + CSS - no errors were found when entering the style.css code into the W3C Jigsaw validator
 
-<img src="screenshots/css.png" alt="screenehot of CSS Jigsaw validation results">
+<img src="screenshots/css.png" alt="screenshot of CSS Jigsaw validation results">
 
-*W3C JIgsaw validator results - CSS*
+*W3C Jigsaw validator results - CSS*
 
 + JavaScript - no errors were found when entering the script.js code into the jshint validator - the unused variable message relates to an onclick attribute within index.html and is not called directly within script.js.
 
-<img src="screenshots/javascript.png" alt="screenshot of js hint validation results">
+<img src="screenshots/javascript.png" alt="screenshot of jshint validation results">
 
 *jshint validation results - JavaScript*
 
@@ -104,7 +104,7 @@ This website is fully responsive for a range of screen sizes.
 
 ### WAVE Testing
 
-+ The website returned the following results when when tested using the Web Accessibility Evalualtion Tool:
++ The website returned the following results when tested using the Web Accessibility Evaluation Tool:
 
 <img src="screenshots/WAVE.png" alt="WAVE test results">
 
@@ -127,13 +127,11 @@ This website is fully responsive for a range of screen sizes.
     - Safari
     - Firefox
 
-
-
 ### Bugs
 
 #### Bugs Fixed During Development
 
-The following provides examples of bugs that were identified and fixed within developmeny.
+The following provides examples of bugs that were identified and fixed within development.
 
 + Missing user feedback
     - The issue: During development, it became clear that sometimes both the player and computer would make the same selection multiple times in a row. In the instance of a draw, nothing would change on the page and it appeared that the game was frozen.
@@ -157,7 +155,7 @@ The following provides examples of bugs that were identified and fixed within de
 
     *Computer tally bug - the issue*
 
-    - The probelm - spelling. When writting the span used to display the computer's tally, I had misspeled the id: "compuer-tally". This meant that the JavaScript function was referencing a span that did not exist.
+    - The problem - spelling. When writing the span used to display the computer's tally, I had misspelled the id: "compuer-tally". This meant that the JavaScript function was referencing a span that did not exist.
 
     <img src="screenshots/bug_1_problem.png" alt="screenshot of the computer tally bug problem">
 
@@ -177,7 +175,7 @@ The following provides examples of bugs that were identified and fixed within de
 
 ## deployment
 
-## techologies used
+## technologies used
 
 ## lessons
 
