@@ -78,19 +78,19 @@ This website is fully responsive for a range of screen sizes.
 
 + HTML - no errors were found when entering the index.html or 404.html code into the W3C validator
 
-<img src="screenshots/index_html.png" alt="screenshot of HTML validation results">
+    <img src="screenshots/index_html.png" alt="screenshot of HTML validation results">
 
 *W3C validator results - HTML*
 
 + CSS - no errors were found when entering the style.css code into the W3C Jigsaw validator
 
-<img src="screenshots/css.png" alt="screenshot of CSS Jigsaw validation results">
+    <img src="screenshots/css.png" alt="screenshot of CSS Jigsaw validation results">
 
 *W3C Jigsaw validator results - CSS*
 
 + JavaScript - no errors were found when entering the script.js code into the jshint validator - the unused variable message relates to an onclick attribute within index.html and is not called directly within script.js.
 
-<img src="screenshots/javascript.png" alt="screenshot of jshint validation results">
+    <img src="screenshots/javascript.png" alt="screenshot of jshint validation results">
 
 *jshint validation results - JavaScript*
 
@@ -98,7 +98,7 @@ This website is fully responsive for a range of screen sizes.
 
 + The website returned the following Lighthouse results when tested in incognito mode:
 
-<img src="screenshots/lighthouse.png" alt="lighthouse test results">
+    <img src="screenshots/lighthouse.png" alt="lighthouse test results">
 
 *Lighthouse test results*
 
@@ -106,7 +106,7 @@ This website is fully responsive for a range of screen sizes.
 
 + The website returned the following results when tested using the Web Accessibility Evaluation Tool:
 
-<img src="screenshots/WAVE.png" alt="WAVE test results">
+    <img src="screenshots/WAVE.png" alt="WAVE test results">
 
 *WAVE test results*
 
@@ -171,7 +171,21 @@ The following provides examples of bugs that were identified and fixed within de
 
 + There are no outstanding bugs.
 
-### lessons
+### Lessons
+
+#### Lesson Incorporated
+
+In my previous project, I identified three lesson to build into this project. These were:
+1. Use temporary borders when styling.
+2. Plan class and id names before writing code - sketch the divs out on paper and define their purpose.
+3. Continue to experiment and explore but set a time limit of 1 hour. If I can't solve a problem within the hour, use a backup.
+
++ Lesson 1 - I did this extensivley in this project and it made a huge different to how quickly I was able to style my page. Contuinue with this practice
++ Lesson 2 - I experimented with this and it helped witf quickly organising the HTML and basic styling. Continue with this practice.
+
+    <img src="screenshots/wirefrme_with_divs.png" alt="screenshot of wireframe with divs">
+
+    *Wireframe showing divs with class names*
 
 ## deployment
 
