@@ -180,14 +180,55 @@ In my previous project, I identified three lesson to build into this project. Th
 2. Plan class and id names before writing code - sketch the divs out on paper and define their purpose.
 3. Continue to experiment and explore but set a time limit of 1 hour. If I can't solve a problem within the hour, use a backup.
 
-+ Lesson 1 - I did this extensivley in this project and it made a huge different to how quickly I was able to style my page. Contuinue with this practice
-+ Lesson 2 - I experimented with this and it helped witf quickly organising the HTML and basic styling. Continue with this practice.
++ Lesson 1 - I did this extensively in this project and it made a huge different to how quickly I was able to style my page. Continue with this practice
++ Lesson 2 - I experimented with this and it helped with quickly organising the HTML and basic styling. Continue with this practice.
 
     <img src="screenshots/wirefrme_with_divs.png" alt="screenshot of wireframe with divs">
 
     *Wireframe showing divs with class names*
 
-## deployment
++ Lesson 3 - I applied this practice; cutting short ideas that were interesting but were taking too long to execute. Continue with this practice.
+
+#### Lessons From This Project
+
+This section includes a list of lessons learned during this project in no particular order:
+
++ My understanding of CSS has improved a lot since my last project. I'm able to style quicker and am getting closer to matching the image in my head with the image on the screen.
++ VS Code is an excellent resource. Being able to write code and see the output appear on screen immediately was a huge help, particularly with CSS.
++ Anchors should not be mixed in with buttons.
++ Horizontally centring a div using margin auto now makes complete sense.
+
+#### Follow-on Actions
+
+In my next project, in addition to continuing with current lessons incorporated: 
++ I need to work on quickly centring elements vertically
++ I need to experiment with auto resizing as the browser window resizes, particularly with text.
++ I need to study more on standard screen sizes, breakpoints and optimal ratios for media queries. Likely in conjunction with the above two points.
+
+## Deployment
+
+### Deployment to GitHub Pages
+
+Deployment was managed on GitHub by using the following steps:
+
+1. Go to the 'settings' tab within the GitHub Debt Deliverance repo
+2. Select 'pages' from the code and automation section
+3. Ensure that:
+    + source is set to 'deploy from branch'
+    + main branch is selected
+    + folder is set to 'root'
+4. Under 'branch', select 'save'
+5. Back in the 'code' tab, wait for the build to finish then fresh the repo
+6. the same page, from the 'environments' section, select 'github-pages'
+7. Select 'view deployment' to see the deployed site
+
+### Version Control
+
+The website was developed using the GitPod Integrated Development Environment (IDE) and pushed to the Debt Delivery repo on GitHub. The following git commands were used to communicate from the IDE to the repo:
+
++ git add . - used to add updates to the staging area ready for committal to the queue
++ git commit -m "comment" - used to commit updates to the repo queue
++ git push - used to send updates in the queue to the reop on GitHub
 
 ## technologies used
 
