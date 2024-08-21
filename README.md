@@ -70,8 +70,6 @@ This website is fully responsive for a range of screen sizes.
 + Ability for a player to add a name to the display table heading.
 + Ability to set a 'best of' feature so that the winner is declared after a player-defined number of games.
 
-## dev steps
-
 ## Testing
 
 ### Validator Testing
@@ -171,9 +169,9 @@ The following provides examples of bugs that were identified and fixed within de
 
 + There are no outstanding bugs.
 
-### Lessons
+## Lessons
 
-#### Lesson Incorporated
+### Lesson Incorporated
 
 In my previous project, I identified three lesson to build into this project. These were:
 1. Use temporary borders when styling.
@@ -189,7 +187,7 @@ In my previous project, I identified three lesson to build into this project. Th
 
 + Lesson 3 - I applied this practice; cutting short ideas that were interesting but were taking too long to execute. Continue with this practice.
 
-#### Lessons From This Project
+### Lessons From This Project
 
 This section includes a list of lessons learned during this project in no particular order:
 
@@ -198,7 +196,7 @@ This section includes a list of lessons learned during this project in no partic
 + Anchors should not be mixed in with buttons.
 + Horizontally centring a div using margin auto now makes complete sense.
 
-#### Follow-on Actions
+### Follow-on Actions
 
 In my next project, in addition to continuing with current lessons incorporated: 
 + I need to work on quickly centring elements vertically
@@ -230,8 +228,37 @@ The website was developed using the GitPod Integrated Development Environment (I
 + git commit -m "comment" - used to commit updates to the repo queue
 + git push - used to send updates in the queue to the reop on GitHub
 
-## technologies used
+## Technologies Used
 
-## lessons
+### Languages
++ HTML
++ CSS
++ JavaScript
 
-## credits
+### Libraries & Online Resources
++ W3.org was used to validate the HTML code
++ jigsaw.w3.org was used to validate the CSS code
++ jshint.com was used to validate the JavaScript code
++ Chrome Developer Tools was used monitor development and preview changes
++ Lighthouse was used to assess performance, accessibility, best practices and SEO metrics
++ wave.webaim.org was used to check enhanced accessibility metrics
++ stackoverflow.com was used for general coding queries
++ w3schools.com was used for specific programming code
++ youTube.com was used for coding tutorials
++ emojipedia.org was used to source the game emojis
++ favicon.io was used to generate the favicon images
+
+## Credits
+
+### Code
++ The CSS and JavaScript code for the modal was sourced from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
++ The JavaScript code for updating the tally was derrived from the Code Institute [Love Maths Walklthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/8775beaed6ed403d92318845af971b30/?child=last)
+### Content
++ All content was created by the developer
+### Acknowledgements
++ The following youTube content creators for coding walkthroughs:
+    - [Web Dev Simplified](https://www.youtube.com/watch?v=1yS-JV4fWqY)
+    - [codeSTACKr](https://www.youtube.com/watch?v=P_H4_miTKsI)
+    - [Code With Ania Kobow](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=263s)
+    - [Kenny Yip Coding](https://www.youtube.com/watch?v=fIBOydve2f8)
++ My mentor Spencer Barriball for great advice yet again!

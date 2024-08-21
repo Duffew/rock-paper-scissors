@@ -94,7 +94,8 @@ function calculateResult() {
     }
     displayResult.innerHTML = resultMessage;
 }
-// update tally for player and computer
+/* update tally for player and computer
+credit Code Institute LOve Maths Tutor */
 function updateTally() {
     if (result === 1) {
         let oldPlayerTally = parseInt(document.getElementById('player-tally').innerText);
@@ -112,7 +113,9 @@ function resetTally() {
     clearDisplay();
 }
 
-// Get the modal
+// Modal code - credit W3schools.com code library
+
+//Get the modal
 const modal = document.getElementById("rules-modal");
 
 // Get the button that opens the modal
