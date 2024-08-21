@@ -252,13 +252,13 @@ The website was developed using the GitPod Integrated Development Environment (I
 
 ### Code
 + The CSS and JavaScript code for the modal was sourced from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
-+ The JavaScript code for updating the tally was derrived from the Code Institute [Love Maths Walklthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/8775beaed6ed403d92318845af971b30/?child=last)
++ The JavaScript code for updating the tally was derived from the Code Institute [Love Maths Walkthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/8775beaed6ed403d92318845af971b30/?child=last)
 ### Content
 + All content was created by the developer
 ### Acknowledgements
 + The following youTube content creators for coding walkthroughs:
     - [Web Dev Simplified](https://www.youtube.com/watch?v=1yS-JV4fWqY)
     - [codeSTACKr](https://www.youtube.com/watch?v=P_H4_miTKsI)
-    - [Code With Ania Kobow](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=263s)
+    - [Code With Ania Kubow](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=263s)
     - [Kenny Yip Coding](https://www.youtube.com/watch?v=fIBOydve2f8)
 + My mentor Spencer Barriball for great advice yet again!
