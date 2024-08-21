@@ -114,7 +114,7 @@ This website is fully responsive for a range of screen sizes.
 + Tallies do not increment in the event of a tie.
 + The modal opens when 'rules' is selected and closes when either the green cross is selected or the user clicks away from the modal.
 + The tallies reset when 'reset tally' is selected.
-+ A 404 page displays un the event of a navigation error
++ A 404 page displays in the event of a navigation error
 + The game page appears when the 'Get Back' link is selected on the 404 page.
 
 ### Browser Testing
@@ -129,13 +129,13 @@ This website is fully responsive for a range of screen sizes.
 
 #### Bugs Fixed During Development
 
-The following provides examples of bugs that were identified and fixed within development.
+The following provides examples of bugs that were identified and fixed within development:
 
 + Missing user feedback
     - The issue: During development, it became clear that sometimes both the player and computer would make the same selection multiple times in a row. In the instance of a draw, nothing would change on the page and it appeared that the game was frozen.
-    - The fix: To counter this, I created a clearDisplay() function and a setTimeout() function. Result: fixed. These functions ensured that when the user made a selection: 
-        - the display would clear
-        - the game results would be returned after a short delay
+    - The fix: To counter this, I created clearDisplay() and setTimeout() functions, and added them to the main game function. Result: fixed. These functions ensure that when the user makes a selection: 
+        - the display clears
+        - the game results appear after a short delay
         - the user is sure that that their selection has been actioned
 
     <img src="screenshots/clearDisplay.png" alt="screenshot of the clear display function">
@@ -199,7 +199,7 @@ This section includes a list of lessons learned during this project in no partic
 ### Follow-on Actions
 
 In my next project, in addition to continuing with current lessons incorporated: 
-+ I need to work on quickly centring elements vertically
++ I need to work on quickly centring elements vertically.
 + I need to experiment with auto resizing as the browser window resizes, particularly with text.
 + I need to study more on standard screen sizes, breakpoints and optimal ratios for media queries. Likely in conjunction with the above two points.
 
@@ -251,10 +251,10 @@ The website was developed using the GitPod Integrated Development Environment (I
 ## Credits
 
 ### Code
-+ The CSS and JavaScript code for the modal was sourced from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
-+ The JavaScript code for updating the tally was derived from the Code Institute [Love Maths Walkthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/8775beaed6ed403d92318845af971b30/?child=last)
++ The CSS and JavaScript code for the modal was sourced from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp).
++ The JavaScript code for updating the tally was derived from the Code Institute [Love Maths Walkthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/8775beaed6ed403d92318845af971b30/?child=last).
 ### Content
-+ All content was created by the developer
++ All content was created by the developer.
 ### Acknowledgements
 + The following youTube content creators for coding walkthroughs:
     - [Web Dev Simplified](https://www.youtube.com/watch?v=1yS-JV4fWqY)
